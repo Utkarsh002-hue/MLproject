@@ -1,0 +1,47 @@
+<html>
+<body>
+<form action="{{url_for('predict_datapoint')}}" method="POST">
+    <div class="form-group">
+        <label for="stars">Stars :</label>
+        <input type="text" id="stars" name="stars" placeholder="Enter the star rating (float)">
+    </div>
+
+    <div class="form-group">
+        <label for="revies">Reviews :</label>
+        <input type="text" id="reviews" name="reviews" placeholder="Enter number of reviews for this product (float)">
+    </div>
+
+    <div class="form-group">  
+        <label for="bilm">Count of product brought in last month :</label>
+        <input type="text" id="bilm" name="boughtInLastMonth" placeholder="Enter count of product brought last month (float)">
+    </div>
+    
+<div class="form-group">
+  <label for="category">Category :</label>
+  <select id="category" name="category">
+    <option value="Men">Men</option>
+    <option value="Women">Women</option>
+    <option value="Luggage  Travel Gear">Luggage Travel Gear</option>
+    <option value="Baby">Baby</option>
+    <option value="Beauty">Beauty</option>
+    <option value="Handmade Baby Products">Handmade Baby Products</option>
+    <option value="Blu-ray Players  Recorders">Blu-ray Players  Recorders</option>
+    <option value="STEM">STEM</option>
+    <option value="Handmade Bedding">Handmade Bedding</option>
+    <option value="International Food Market">International Food Market</option>
+  </select>
+</div>
+  
+<div class="form-group">
+  <label for="bs">Best Seller :</label>
+  <select id="bs" name="bs">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+  </select>
+</div>
+
+<div style="clear:both;"></div>
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>
