@@ -6,7 +6,7 @@ import pandas as pd
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import LabelEncoder,StandardScaler
+from sklearn.preprocessing import OneHotEncoder,StandardScaler
 
 from src.exception import CustomException
 from src.logger import logging
@@ -42,7 +42,7 @@ class DataTransformation:
             cat_pipeline=Pipeline(
                 steps=[
                 ('imputer',SimpleImputer(strategy='most_frequent')),
-                ('labelencoder',LabelEncoder()),
+                ('onehot', OneHotEncoder(handle_unknown='ignore')),
                 ('scaler',StandardScaler())
                 ]
                 )
@@ -97,6 +97,7 @@ class DataTransformation:
             input_feature_test_df['fairRated'] = np.where(input_feature_test_df['reviews'] >= input_feature_test_df['reviews'].mean(),1,0)
             
             ## Trnasformating using preprocessor obj
+            
             input_feature_train_arr=preprocessing_obj.fit_transform(input_feature_train_df)
             input_feature_test_arr=preprocessing_obj.transform(input_feature_test_df)
 
@@ -122,5 +123,4 @@ class DataTransformation:
             
         except Exception as e:
             logging.info("Exception occured in the initiate_datatransformation")
-
             raise CustomException(e,sys)

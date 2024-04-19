@@ -1,5 +1,5 @@
-#!C:\Coding\new1\my\Scripts\python.exe
-# EASY-INSTALL-ENTRY-SCRIPT: 'fonttools==4.51.0','console_scripts','fonttools'
+#!C:\Coding\new1\myenv\Scripts\python.exe
+# EASY-INSTALL-ENTRY-SCRIPT: 'fonttools==4.51.0','console_scripts','ttx'
 import re
 import sys
 
@@ -30,4 +30,4 @@ globals().setdefault('load_entry_point', importlib_load_entry_point)
 
 if __name__ == '__main__':
     sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
-    sys.exit(load_entry_point('fonttools==4.51.0', 'console_scripts', 'fonttools')())
+    sys.exit(load_entry_point('fonttools==4.51.0', 'console_scripts', 'ttx')())

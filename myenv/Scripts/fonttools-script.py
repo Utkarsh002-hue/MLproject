@@ -1,10 +1,10 @@
-#!C:\Coding\new1\my\Scripts\python.exe
-# EASY-INSTALL-ENTRY-SCRIPT: 'numpy==2.0.0rc1','console_scripts','f2py'
+#!C:\Coding\new1\myenv\Scripts\python.exe
+# EASY-INSTALL-ENTRY-SCRIPT: 'fonttools==4.51.0','console_scripts','fonttools'
 import re
 import sys
 
 # for compatibility with easy_install; see #2198
-__requires__ = 'numpy==2.0.0rc1'
+__requires__ = 'fonttools==4.51.0'
 
 try:
     from importlib.metadata import distribution
@@ -30,4 +30,4 @@ globals().setdefault('load_entry_point', importlib_load_entry_point)
 
 if __name__ == '__main__':
     sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
-    sys.exit(load_entry_point('numpy==2.0.0rc1', 'console_scripts', 'f2py')())
+    sys.exit(load_entry_point('fonttools==4.51.0', 'console_scripts', 'fonttools')())

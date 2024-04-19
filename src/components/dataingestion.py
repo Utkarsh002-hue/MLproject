@@ -5,6 +5,7 @@ from src.exception import CustomException
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
+from pathlib import Path
 
 
 
@@ -23,7 +24,7 @@ class DataIngestion:
     def initiate_data_ingestion(self):
         logging.info('Started with data ingestion')
         try:
-            df=pd.read_csv(os.path.join('notebooks/data','dataset.csv'))
+            df=pd.read_csv(os.path.join('..', 'notebooks', 'data', 'dataset.csv'))
             logging.info('Data read in dataframe')
 
             os.makedirs(os.path.dirname(self.ingestion_config.raw_data_path),exist_ok=True)

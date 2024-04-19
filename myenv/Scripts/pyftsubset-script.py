@@ -1,4 +1,4 @@
-#!C:\Coding\new1\my\Scripts\python.exe
+#!C:\Coding\new1\myenv\Scripts\python.exe
 # EASY-INSTALL-ENTRY-SCRIPT: 'fonttools==4.51.0','console_scripts','pyftsubset'
 import re
 import sys
